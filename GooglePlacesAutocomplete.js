@@ -128,7 +128,8 @@ export default class GooglePlacesAutocomplete extends Component {
     // This will load the default value's search results after the view has
     // been rendered
     this._isMounted = true;
-    this._onChangeText(this.state.text);
+    // This is causing the listview to always show with current location
+    //this._onChangeText(this.state.text);
   }
 
   componentWillReceiveProps(nextProps) {
