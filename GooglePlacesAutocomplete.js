@@ -182,7 +182,8 @@ export default class GooglePlacesAutocomplete extends Component {
     if (this.props.enableHighAccuracyLocation && Platform.OS === 'android') {
       options = {
         enableHighAccuracy: true,
-        timeout: 20000
+        timeout: 20000,
+        maximumAge: 0
       }
     }
 
