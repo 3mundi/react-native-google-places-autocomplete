@@ -179,12 +179,8 @@ export default class GooglePlacesAutocomplete extends Component {
       maximumAge: 0
     };
 
-    if (this.props.enableHighAccuracyLocation && Platform.OS === 'android') {
-      options = {
-        enableHighAccuracy: true,
-        timeout: 20000,
-        maximumAge: 0
-      }
+    if (this.props.currentLocationOptions) {
+      options = this.props.currentLocationOptions;
     }
 
     navigator.geolocation.getCurrentPosition(
